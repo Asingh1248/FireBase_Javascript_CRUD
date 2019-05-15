@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <!--Retrieves a Firebase app instance.-->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <!-- V.imp for firebase data : Retrieves The app associated with the Database service instance.-->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC3R_Pcmtpwy0flD6LmWRsI3pA0OefwesE",
+            authDomain: "crud-javascript-aa943.firebaseapp.com",
+            databaseURL: "https://crud-javascript-aa943.firebaseio.com",
+            projectId: "crud-javascript-aa943",
+            storageBucket: "crud-javascript-aa943.appspot.com",
+            messagingSenderId: "144552367868",
+            appId: "1:144552367868:web:d0fc05e1737cf541"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Id: </td>
+            <td><input type="text" name="id" id="user_id" /></td>
+        </tr>
+        <tr>
+            <td>User Name: </td>
+            <td><input type="text" name="user_name" id="user_name" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Save" onclick="save_user();" />
+                <input type="button" value="Update" onclick="update_user();" />
+                <input type="button" value="Delete" onclick="delete_user();" />
+            </td>
+        </tr>
+    </table>
+
+    <h3>Users List</h3>
+
+    <table id="tbl_users_list" border="1">
+        <tr>
+            <td>#ID</td>
+            <td>NAME</td>
+        </tr>
+    </table>
+    <script src="CRUDFirebase.js"></script>
+</body>
+
+</html>

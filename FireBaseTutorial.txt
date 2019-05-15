@@ -1,0 +1,20 @@
+//Sign in:--Add Project
+
+//Step2:Authentication--Email--enabled it
+//Step3:Register your app to web Conosle to get the sdk <> Symbol
+//Step3: Create RealtimeDataBase ---Rules jaake (true karke and publish (redmark should come ))
+
+//https://console.firebase.google.com/u/1/project/crud-javascript-aa943/database/crud-javascript-aa943/data--link
+
+//*********************************************************
+1.Include:<script> var firebaseConfig from FireBase Setting in index.html 
+2.Include <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script> and  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+3.Create Index.html with Table and tr and td and Iclude script crud
+
+//**************************************************
+Login:
+
+Query query = databaseReference.child("users").orderByChild("email").equalTo(txvUsername.getText().toString().trim())
+UsersBean usersBean = user.getValue(UsersBean.class);
+
+                    if (usersBean.password.equals(txvPassword.getText().toString().trim())
